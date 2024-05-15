@@ -1,4 +1,4 @@
-<x-forms::field-wrapper :id="$getId()" :label="$getLabel()" :label-sr-only="$isLabelHidden()" :helper-text="$getHelperText()" :hint="$getHint()" :hint-icon="$getHintIcon()" :required="$isRequired()" :state-path="$getStatePath()">
+<x-dynamic-component :id="$getId()" :label="$getLabel()" :label-sr-only="$isLabelHidden()" :helper-text="$getHelperText()" :hint="$getHint()" :hint-icon="$getHintIcon()" :required="$isRequired()" :state-path="$getStatePath()">
     <div x-data="{ state: $wire.entangle('{{ $getStatePath() }}') }">
         @if(!empty($getOptions()) && count($getOptions()) > 0)
         <div class="relative">
@@ -73,4 +73,4 @@
             </h1>
         @endif
     </div>
-</x-forms::field-wrapper>
+</x-dynamic-component>
